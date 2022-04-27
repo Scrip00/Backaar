@@ -2,3 +2,8 @@ jdk:
   - openjdk11
 before_install:
   - ./scripts/prepareJitpackEnvironment.sh
+
+
+install:
+  - FILE="-Dfile=backaar.aar"
+  - mvn install:install-file $FILE -DgroupId=com.Scrip0.backaar -DartifactId=backaar -Dversion=1.0 -Dpackaging=aar -DgeneratePom=true
